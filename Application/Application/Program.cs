@@ -1,4 +1,6 @@
-﻿namespace Application
+﻿using Kitware.VTK;
+
+namespace Application
 {
     internal class Program
     {
