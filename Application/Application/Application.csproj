@@ -33,13 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kitware.mummy.Runtime, Version=1.1.0.0, Culture=neutral, PublicKeyToken=97bd2f68957afd40, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\ActiViz.NET 9.3.2023 Trial Edition\bin\Kitware.mummy.Runtime.dll</HintPath>
+    <Reference Include="Kitware.mummy.Runtime, Version=1.0.2.599, Culture=neutral, PublicKeyToken=995c7fb9db2c1b44, processorArchitecture=AMD64">
+      <HintPath>..\packages\Activiz.NET.x64.5.8.0\lib\net20\Kitware.mummy.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Kitware.VTK, Version=5.8.0.607, Culture=neutral, PublicKeyToken=995c7fb9db2c1b44, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\ActiViz.NET 9.3.2023 Trial Edition\bin\Kitware.VTK.dll</HintPath>
+      <HintPath>..\packages\Activiz.NET.x64.5.8.0\lib\net20\Kitware.VTK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
