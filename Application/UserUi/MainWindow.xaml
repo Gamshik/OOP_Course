@@ -16,6 +16,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -29,13 +30,16 @@
 
         <Label Content="Source directory:" Grid.Row="2" Grid.Column="0" Margin="5"/>
         <Button x:Name="BrowseSourceButton" Content="Browse..." Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="5" Click="BrowseSourceButton_Click"/>
-        <TextBlock x:Name="SourceDirectoryTextBlock" TextWrapping="Wrap" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" Height="90" Text="Selected directory: "/>
+        <TextBlock x:Name="SourceDirectoryTextBlock" TextWrapping="Wrap" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" Height="70" Text="Selected directory: "/>
 
         <Label Content="Destination directory:" Grid.Row="4" Grid.Column="0" Margin="5"/>
         <Button x:Name="BrowseDestinationButton" Content="Browse..." Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin="5" Click="BrowseDestinationButton_Click"/>
-        <TextBlock x:Name="DestinationDirectoryTextBlock" TextWrapping="Wrap" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" Height="90" Text="Selected directory: "/>
+        <TextBlock x:Name="DestinationDirectoryTextBlock" TextWrapping="Wrap" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" Height="70" Text="Selected directory: "/>
 
-        <Button x:Name="StartButton" Content="Start" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="10" Width="100" Click="StartButton_Click"/>
-        <Button x:Name="CloseButton" Content="Close" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Margin="10" Width="100" Click="CloseButton_Click"/>
+        <Label Content="Threshold value:" Grid.Row="6" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="ThresholdValueTextBox" TextWrapping="Wrap" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Margin="5"/>
+
+        <Button x:Name="StartButton" Content="Start" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Margin="10" Width="100" Click="StartButton_Click"/>
+        <Button x:Name="CloseButton" Content="Close" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Margin="10" Width="100" Click="CloseButton_Click"/>
     </Grid>
 </Window>

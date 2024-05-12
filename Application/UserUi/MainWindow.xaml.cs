@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Forms;
 using MessageBox = System.Windows.MessageBox;
@@ -32,8 +33,8 @@ namespace UserUi
         }
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            string sourceDirectory = SourceDirectoryTextBlock.Text.Substring(SourceDirectoryTextBlock.Text.IndexOf(":") + 1).Trim();
-            string destinationDirectory = DestinationDirectoryTextBlock.Text.Substring(SourceDirectoryTextBlock.Text.IndexOf(":") + 1).Trim();
+            var sourceDirectory = SourceDirectoryTextBlock.Text.Substring(SourceDirectoryTextBlock.Text.IndexOf(":") + 1).Trim();
+            var destinationDirectory = DestinationDirectoryTextBlock.Text.Substring(SourceDirectoryTextBlock.Text.IndexOf(":") + 1).Trim();
 
             if (sourceDirectory == destinationDirectory)
             {
@@ -53,10 +54,19 @@ namespace UserUi
                 return;
             }
 
-            var processingWindow = new ProcessingWindow();
-            processingWindow.Show();
-            processingWindow.StartProcessing(sourceDirectory, destinationDirectory);
-            Close();
+            if (Int16.TryParse(ThresholdValueTextBox.Text, out short thresholdValue))
+            {
+                var processingWindow = new ProcessingWindow();
+                processingWindow.Show();
+                processingWindow.StartProcessing(sourceDirectory, destinationDirectory, thresholdValue);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Enter valid threshold value.", "Invalid threshold value", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
         }
         private void CloseButton_Click(object sender, RoutedEventArgs e) => Close();
     }

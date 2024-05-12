@@ -32,7 +32,7 @@ namespace UserUi
         /// </summary>
         /// <param name="sourceDirectory">Путь к папке с исходными dicom срезами</param>
         /// <param name="destinationDirectory">Путь к папке для сохранения dicom срезов</param>
-        public void StartProcessing(string sourceDirectory, string destinationDirectory)
+        public void StartProcessing(string sourceDirectory, string destinationDirectory, short thresholdValue)
         {
             _sourceDirectory = sourceDirectory;
             _destinationDirectory = destinationDirectory;
@@ -41,7 +41,7 @@ namespace UserUi
 
             try
             {
-                thresholdFilter.CleanTheDicomKit(_sourceDirectory, _destinationDirectory, 1200);
+                thresholdFilter.CleanTheDicomKit(_sourceDirectory, _destinationDirectory, thresholdValue);
             }
             catch (DirectoryNotFoundException ex)
             {
