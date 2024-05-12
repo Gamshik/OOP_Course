@@ -26,7 +26,7 @@
         </Grid.ColumnDefinitions>
         
         <TextBlock x:Name="ShortInfoTextBlock" TextWrapping="Wrap"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="5" TextAlignment="Center" FontSize="20" 
-                   Text="Select folder with dicom images and folder to save processed images, then press Start button:"/>
+                   Text="Select folder with dicom images, folder to save processed images, and enter threshold value then press Start button:"/>
 
         <Label Content="Source directory:" Grid.Row="2" Grid.Column="0" Margin="5"/>
         <Button x:Name="BrowseSourceButton" Content="Browse..." Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="5" Click="BrowseSourceButton_Click"/>
