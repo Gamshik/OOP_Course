@@ -2,6 +2,7 @@
 using Dicom.Imaging;
 using DualContouring;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
